@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'ClearSansInfanity';
+  src: url('./assets/fonts/ClearSansInfanity-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --bg: #171717;
+  --muted: #818181;
+  --acc1: #DDC1FE;
+  --acc2: #F4F17B;
+  --acc3: #EB6F49;
+  --text: #F5F5F5;
+  --text-dim: #CFCFCF;
+  --header-h: 72px;
+  --font-heading: 'ClearSansInfanity', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font-family: inherit;
+}
