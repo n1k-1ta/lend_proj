@@ -35,6 +35,14 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+body.theme-light {
+  background: #FFFBF7 !important;
+  color: #181818 !important;
+}
+body.theme-dark {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
 a {
   color: var(--text);
   text-decoration: none;
@@ -45,4 +53,41 @@ img {
 }
 button {
   font-family: inherit;
+}
+.theme-light .hero-glass {
+  background: rgba(30,30,30,0.53);
+  color: #fff !important;
+  text-shadow: 0 1px 8px #fff2;
+  backdrop-filter: blur(14px) saturate(116%);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.18), 0 2px 10px rgba(90,82,210,0.13);
+}
+.theme-light .hero-glass * {color: #fff !important;text-shadow: 0 1px 8px #fff2;}
+.theme-light .hero-glass .btn, .theme-light .hero-glass .btn-primary, .theme-light .hero-glass .btn-accent {
+  background: #fff !important; color: #1a1a1a !important; border: 1.5px solid #bdd !important;}
+.theme-light .grid-3 .card {
+  background: rgba(30,30,30,0.53);
+  color: #fff !important;
+  text-shadow: 0 1px 8px #fff2;
+  backdrop-filter: blur(10px) saturate(120%);
+  border: 1.5px solid #ececec;
+}
+.theme-light .grid-3 .card:hover {
+  color: #fff !important;
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 1.5px solid transparent;
+  text-shadow: none;
+}
+.theme-dark .grid-3 .card, .theme-dark .hero-glass {
+  color: #fff !important;
+}
+@media (prefers-color-scheme: dark) {
+  body:not(.theme-light) {
+    background: var(--bg);
+    color: var(--text);
+  }
+}
+body.theme-light .main,
+body.theme-light .section {
+  background: #FFFBF7 !important;
 }

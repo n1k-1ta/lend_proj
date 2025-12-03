@@ -412,16 +412,25 @@
   backdrop-filter: blur(10px) saturate(125%);
   border: 1.5px solid rgba(255,255,255,0.10);
   box-shadow: 0 8px 28px rgba(0,0,0,0.14);
-  transition: background 0.33s cubic-bezier(.3,2.2,.5,1), color 0.22s;
+  transition: background 0.33s cubic-bezier(.3,2.2,.5,1);
 }
 .grid-3 .card.card-hover-orange:hover {
   background: var(--acc3);
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 1.5px solid transparent;
 }
 .grid-3 .card.card-hover-yellow:hover {
   background: var(--acc2);
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 1.5px solid transparent;
 }
 .grid-3 .card.card-hover-violet:hover {
   background: var(--acc1);
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 1.5px solid transparent;
 }
 .card h3 {
   color: inherit;

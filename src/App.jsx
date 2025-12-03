@@ -16,6 +16,12 @@ function App() {
   const [erase, setErase] = useState(false);
   const [looping, setLooping] = useState(false);
   const sloganTimeout = useRef();
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.body.classList.toggle('theme-light', theme === 'light');
+    document.body.classList.toggle('theme-dark', theme === 'dark');
+  }, [theme]);
 
   useEffect(() => {
     let current = sloganList[sloganIdx];
@@ -105,6 +111,9 @@ function App() {
             <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Контакты</a>
           </nav>
           <button className="btn cta-header" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
+          <button className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="Сменить тему" title="Сменить тему" style={{ marginLeft: 16 }}>
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </div>
       </header>
 
