@@ -104,9 +104,9 @@
   align-items: center;
 
   /* Frosted glass effect — basic values (fallback) */
-  background-color: rgba(187, 187, 188, 0.18);
-  backdrop-filter: blur(10px) saturate(150%);
-  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  background-color: rgba(187, 187, 188, 0.06);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
 
   /* Basic shadows for depth (fallback) */
   box-shadow:
@@ -123,13 +123,23 @@
 
   /* Smooth transitions */
   transition: background-color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              box-shadow 400ms cubic-bezier(1, 0.0, 0.4, 1);
+              box-shadow 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              backdrop-filter 0.2s ease;
+}
+
+/* Hover состояние для усиления эффекта матового стекла */
+.label:hover {
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  background-color: rgba(187, 187, 188, 0.24);
 }
 
 /* Улучшенные стили с color-mix (если поддерживается) */
 @supports (color: color-mix(in srgb, red 50%, blue)) {
   .label {
     background-color: color-mix(in srgb, var(--c-glass) 18%, transparent);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
 
     box-shadow:
       inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
@@ -143,6 +153,12 @@
       0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
       0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
   }
+
+  .label:hover {
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    background-color: color-mix(in srgb, var(--c-glass) 24%, transparent);
+  }
 }
 
 /* ============================================
@@ -151,7 +167,7 @@
 .label i {
   z-index: 0;
   font-size: 1rem;
-  color: var(--c-content);
+  color: var(--c-light);
   transition: transform 400ms cubic-bezier(0.5, 0, 0, 1),
               opacity 400ms cubic-bezier(0.5, 0, 0, 1);
 }

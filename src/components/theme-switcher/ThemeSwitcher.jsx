@@ -115,7 +115,7 @@ export default function ThemeSwitcher({ theme = 'light', onThemeChange }) {
       />
       <label htmlFor="switch" className={styles.label}>
         <i className={`fas fa-moon ${styles.moon}`}></i>
-        <i className={`fas fa-sun ${styles.sun}`}></i>
+        <i className={`fas fa-lightbulb ${styles.sun}`}></i>
         <span className={styles.ball}></span>
       </label>
     </div>
