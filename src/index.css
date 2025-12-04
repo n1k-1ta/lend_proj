@@ -34,6 +34,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  transition: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              color 400ms cubic-bezier(1, 0.0, 0.4, 1);
 }
 body.theme-light {
   background: #FFFBF7 !important;

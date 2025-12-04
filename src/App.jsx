@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import ThemeSwitcher from './components/theme-switcher/ThemeSwitcher'
 import './App.css'
 
 function App() {
@@ -111,9 +112,7 @@ function App() {
             <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Контакты</a>
           </nav>
           <button className="btn cta-header" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
-          <button className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} aria-label="Сменить тему" title="Сменить тему" style={{ marginLeft: 16 }}>
-            {theme === 'light' ? '🌙' : '☀️'}
-          </button>
+          <ThemeSwitcher theme={theme} onThemeChange={setTheme} />
         </div>
       </header>
 
