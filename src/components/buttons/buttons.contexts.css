@@ -30,19 +30,21 @@
 /* CTA form buttons */
 .cta-form .btn-accent {
   box-shadow: 0 var(--spacing-base) var(--spacing-4xl) var(--acc3-alpha-35);
-  transition: transform var(--transition-slow) ease, box-shadow var(--transition-normal) ease;
-}
+  transition: transform var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1),
+              background var(--transition-normal) ease;
+} */
 
-.cta-form .btn-accent:hover {
+ .cta-form .btn-accent:hover {
   transform: var(--transform-lift-md);
   box-shadow: 0 var(--shadow-offset-lg) var(--shadow-offset-3xl) var(--acc3-alpha-40);
-}
+} 
 
 /* ========================================
    BUTTONS - Theme Styles
    ======================================== */
 
-/* Light theme overrides for hero-glass buttons */
+Light theme overrides for hero-glass buttons
 .theme-light .hero-glass .btn,
 .theme-light .hero-glass .btn-primary,
 .theme-light .hero-glass .btn-accent {
@@ -50,4 +52,5 @@
   color: #1a1a1a !important;
   border: 1.5px solid #bdd !important;
 }
+
 

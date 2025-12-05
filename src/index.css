@@ -174,7 +174,7 @@
   --transition-slow: 0.42s ease;
   --transition-slower: 0.6s ease;
   --transition-slowest: 0.7s ease;
-  --transition-button: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  --transition-button: transform var(--transition-normal), background var(--transition-normal), border-color var(--transition-normal);
   --transition-custom-25: 0.25s;
   --transition-custom-33: 0.33s;
   --transition-custom-50: 0.5s;

@@ -14,14 +14,14 @@
   color: var(--text);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: var(--transition-button);
+  transition: var(--transition-button) !important;
   position: relative;
   z-index: var(--z-base);
   isolation: isolate;
 }
 
 .btn:hover {
-  transform: var(--transform-lift-xs);
+  transform: var(--transform-lift-sm);
   border-color: var(--color-white-alpha-24);
   background: var(--color-white-alpha-10);
   backdrop-filter: blur(var(--blur-xs)) saturate(var(--saturate-md));

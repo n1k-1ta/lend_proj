@@ -111,7 +111,7 @@ function App() {
             <a href="#audience" onClick={(e) => handleScroll(e, 'audience')}>Для кого</a>
             <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Контакты</a>
           </nav>
-          <button className="btn cta-header" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
+          <button className="btn" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
           <ThemeSwitcher theme={theme} onThemeChange={setTheme} />
         </div>
       </header>
@@ -255,7 +255,7 @@ function App() {
                 />
                 <button className="btn btn-accent" type="submit" disabled={submitting}>
                   {submitting ? 'Отправка...' : 'Начать сейчас'}
-        </button>
+                </button>
               </form>
             </div>
           </div>
