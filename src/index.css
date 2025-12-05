@@ -179,6 +179,14 @@
   --transition-custom-33: 0.33s;
   --transition-custom-50: 0.5s;
   
+  /* Theme transition - плавное переключение тем */
+  --transition-theme: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+                      color 400ms cubic-bezier(1, 0.0, 0.4, 1),
+                      border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+                      box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
+                      backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1),
+                      outline-color 400ms cubic-bezier(1, 0.0, 0.4, 1);
+  
   /* Animation Durations */
   --animation-fast: 1s;
   --animation-base: 4s;
@@ -344,6 +352,24 @@
 * {
   box-sizing: border-box;
 }
+
+/* Глобальное применение плавного перехода для всех элементов при переключении тем */
+*,
+*::before,
+*::after {
+  transition: var(--transition-theme);
+}
+
+/* Исключения: медиа-элементы и SVG не нуждаются в transition для цветов */
+svg,
+svg *,
+canvas,
+canvas *,
+img,
+video,
+iframe {
+  transition: none;
+}
 html, body, #root {
   height: 100%;
 }
@@ -351,8 +377,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  transition: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              color 400ms cubic-bezier(1, 0.0, 0.4, 1);
+  transition: var(--transition-theme);
 }
 body.theme-light {
   background: #FFFBF7 !important;

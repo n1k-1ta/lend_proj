@@ -120,11 +120,6 @@
     inset 2px -6.5px 1px -4px rgba(0, 0, 0, 0.1),
     0px 1px 5px 0px rgba(0, 0, 0, 0.1),
     0px 6px 16px 0px rgba(0, 0, 0, 0.08);
-
-  /* Smooth transitions */
-  transition: background-color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              box-shadow 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              backdrop-filter 0.2s ease;
 }
 
 /* Hover состояние для усиления эффекта матового стекла */
