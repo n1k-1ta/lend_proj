@@ -66,10 +66,16 @@
   outline-offset: var(--spacing-xs);
 }
 
-.btn-hero {
+.btn-hero,
+a.btn-hero,
+button.btn-hero {
   background: var(--acc2-alpha-75);
   transition: var(--transition-button);
-  color: var(--bg);
+  color: var(--color-dark-tertiary) !important;
+  font-size: var(--text-base);
+  width: 200px;
+  min-width: 200px;
+  text-align: center;
 }
 
 .btn-hero::after {
@@ -83,4 +89,11 @@
 .btn_header {
   transition: var(--transition-button);
   color: var(--text);
+}
+
+/* Light theme override for hero buttons */
+body.theme-light .btn-hero,
+body.theme-light a.btn-hero,
+body.theme-light button.btn-hero {
+  color: var(--color-dark-tertiary) !important;
 }
