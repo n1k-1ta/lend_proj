@@ -10,20 +10,17 @@
   height: var(--size-button-height);
   padding: 0 var(--spacing-base);
   border: var(--border-thin) solid var(--color-white-alpha-14);
-  background: var(--color-bg-glass-light);
-  color: var(--text);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: var(--transition-button) !important;
   position: relative;
   z-index: var(--z-base);
   isolation: isolate;
+  background: var(--color-white-alpha-10);
 }
 
 .btn:hover {
   transform: var(--transform-lift-sm);
   border-color: var(--color-white-alpha-24);
-  background: var(--color-white-alpha-10);
   backdrop-filter: blur(var(--blur-xs)) saturate(var(--saturate-md));
 }
 
@@ -49,24 +46,11 @@
    BUTTONS - Variants
    ======================================== */
 
-.btn-primary {
-  background: var(--acc2);
-  border: var(--border-thin) solid var(--color-black-alpha-06);
-  color: var(--color-dark-alt);
-}
-
-.btn-primary::after {
-  background: var(--acc2-alpha-65);
-}
-
-.btn-primary:hover {
-  background: var(--acc2-hover);
-}
-
 .btn-accent {
   background: var(--acc3);
   border: var(--border-thin) solid var(--color-black-alpha-06);
   color: var(--color-dark-alt);
+  transition: var(--transition-button);
 }
 
 .btn-accent::after {
@@ -80,4 +64,23 @@
 .btn:focus-visible {
   outline: var(--border-thick) solid var(--color-white-alpha-50);
   outline-offset: var(--spacing-xs);
+}
+
+.btn-hero {
+  background: var(--acc2-alpha-75);
+  transition: var(--transition-button);
+  color: var(--bg);
+}
+
+.btn-hero::after {
+  background: var(--acc2-alpha-65);
+}
+
+.btn-hero:hover {
+  box-shadow: 0 0 20px var(--acc2-alpha-50), 0 0 40px var(--acc2-alpha-30);
+}
+
+.btn_header {
+  transition: var(--transition-button);
+  color: var(--text);
 }

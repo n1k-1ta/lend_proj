@@ -111,7 +111,7 @@ function App() {
             <a href="#audience" onClick={(e) => handleScroll(e, 'audience')}>Для кого</a>
             <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Контакты</a>
           </nav>
-          <button className="btn" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
+          <button className="btn btn_header" onClick={(e) => handleScroll(e, 'cta')}>Попробовать бесплатно</button>
           <ThemeSwitcher theme={theme} onThemeChange={setTheme} />
         </div>
       </header>
@@ -127,8 +127,8 @@ function App() {
               <h1 className="title" data-animate style={{ '--delay': '0.1s', textAlign: 'center' }}>Персональный ИИ-репетитор для школьников</h1>
               <p className="subtitle" data-animate style={{ '--delay': '0.15s', textAlign: 'center' }}>Мгновенная проверка решений, детальный разбор ошибок и персонализированные объяснения</p>
               <div className="actions hero-actions" data-animate style={{ '--delay': '0.22s', justifyContent: 'center' }}>
-                <button className="btn" onClick={(e) => handleScroll(e, 'cta')}>Начать обучение</button>
-                <a className="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Демо-видео</a>
+                <button className="btn btn-hero" onClick={(e) => handleScroll(e, 'cta')}>Начать обучение</button>
+                <a className="btn btn-hero" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Демо-видео</a>
               </div>
             </div>
           </div>
@@ -234,7 +234,7 @@ function App() {
           <div className="container">
             <div className="cta" data-animate style={{ '--delay': '0.12s' }}>
               <div className="cta-content">
-      <div>
+                <div>
                   <h2>Готовы улучшить знания по математике?</h2>
                   <p className="subtitle">Оставьте email, чтобы получить ранний доступ</p>
                 </div>
@@ -243,7 +243,8 @@ function App() {
                   <span>🧠 Персональная траектория</span>
                   <span>🗂️ История прогресса</span>
                 </div>
-      </div>
+              </div>
+
               <form className="cta-form" onSubmit={handleSubmit}>
                 <input
                   className="input"
