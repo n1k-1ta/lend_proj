@@ -647,6 +647,11 @@
   gap: var(--spacing-md);
 }
 
+/* Tech list card colors */
+.tech-list .card:nth-child(1) { background: var(--acc4); }
+.tech-list .card:nth-child(2) { background: var(--acc5); }
+.tech-list .card:nth-child(3) { background: var(--acc6); }
+
 /* ========================================
    STEPS
    ======================================== */
