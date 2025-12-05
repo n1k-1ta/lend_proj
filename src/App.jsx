@@ -128,7 +128,7 @@ function App() {
               <p className="subtitle" data-animate style={{ '--delay': '0.15s', textAlign: 'center' }}>Мгновенная проверка решений, детальный разбор ошибок и персонализированные объяснения</p>
               <div className="actions hero-actions" data-animate style={{ '--delay': '0.22s', justifyContent: 'center' }}>
                 <button className="btn btn-primary" onClick={(e) => handleScroll(e, 'cta')}>Начать обучение</button>
-                <a className="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Демо-видео</a>
+                <a className="btn btn-primary" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Демо-видео</a>
               </div>
             </div>
           </div>
