@@ -175,6 +175,9 @@
   --transition-slower: 0.6s ease;
   --transition-slowest: 0.7s ease;
   --transition-button: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  --transition-custom-25: 0.25s;
+  --transition-custom-33: 0.33s;
+  --transition-custom-50: 0.5s;
   
   /* Animation Durations */
   --animation-fast: 1s;
@@ -185,6 +188,29 @@
   --animation-slowest: 11s;
   --animation-very-slow: 12s;
   --animation-extreme: 18s;
+  
+  /* Animation Delays */
+  --animation-delay-21: 0.21s;
+  --animation-delay-39: 0.39s;
+  --animation-delay-57: 0.57s;
+  --animation-delay-120: 1.2s;
+  --animation-delay-240: 2.4s;
+  --animation-delay-250: 2.5s;
+  
+  /* Box Shadow Specific Values */
+  --shadow-offset-xs: 3px;
+  --shadow-offset-sm: 5px;
+  --shadow-offset-md: 6px;
+  --shadow-offset-lg: 22px;
+  --shadow-offset-xl: 26px;
+  --shadow-offset-2xl: 30px;
+  --shadow-offset-3xl: 46px;
+  --shadow-offset-4xl: 64px;
+  --shadow-blur-xs: 1.5px;
+  
+  /* Specific Sizes */
+  --size-media-min-height: 120px;
+  --gap-small: 6px;
   
   /* Font Sizes */
   --text-xs: 12px;
