@@ -640,6 +640,35 @@
 .audience .card:nth-child(2) { background: var(--acc2); }
 .audience .card:nth-child(3) { background: var(--acc3); }
 
+/* Анимация появления для audience карточек */
+.audience .card[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              var(--transition-theme);
+  transition-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+.audience .card[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Последовательная задержка для audience карточек */
+.audience .card[data-animate]:nth-child(1) {
+  --delay: 0.1s;
+}
+
+.audience .card[data-animate]:nth-child(2) {
+  --delay: 0.2s;
+}
+
+.audience .card[data-animate]:nth-child(3) {
+  --delay: 0.3s;
+}
+
 /* Tech list grid */
 .tech-list {
   display: grid;
@@ -651,6 +680,35 @@
 .tech-list .card:nth-child(1) { background: var(--acc4); }
 .tech-list .card:nth-child(2) { background: var(--acc5); }
 .tech-list .card:nth-child(3) { background: var(--acc6); }
+
+/* Анимация появления для tech-list карточек */
+.tech-list .card[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              var(--transition-theme);
+  transition-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+.tech-list .card[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Последовательная задержка для tech-list карточек */
+.tech-list .card[data-animate]:nth-child(1) {
+  --delay: 0.1s;
+}
+
+.tech-list .card[data-animate]:nth-child(2) {
+  --delay: 0.2s;
+}
+
+.tech-list .card[data-animate]:nth-child(3) {
+  --delay: 0.3s;
+}
 
 /* ========================================
    STEPS
@@ -690,6 +748,39 @@
   backdrop-filter: blur(var(--blur-base));
 }
 
+/* Анимация появления для step элементов */
+.step[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              var(--transition-theme);
+  transition-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+.step[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Последовательная задержка для каждого step */
+.steps .step[data-animate]:nth-child(1) {
+  --delay: 0.1s;
+}
+
+.steps .step[data-animate]:nth-child(2) {
+  --delay: 0.2s;
+}
+
+.steps .step[data-animate]:nth-child(3) {
+  --delay: 0.3s;
+}
+
+.steps .step[data-animate]:nth-child(4) {
+  --delay: 0.4s;
+}
+
 .step-num {
   width: var(--size-icon-base);
   height: var(--size-icon-base);
@@ -718,6 +809,22 @@
   color: var(--text);
   box-shadow: 0 var(--shadow-offset-xl) var(--spacing-9xl) var(--color-black-alpha-38);
   overflow: hidden;
+}
+
+/* Анимация появления для CTA блока */
+.cta[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              var(--transition-theme);
+  transition-delay: 0.15s;
+  will-change: transform, opacity;
+}
+
+.cta[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CTA animated background */
