@@ -1,0 +1,53 @@
+/* ========================================
+   BUTTONS - Context Styles
+   ======================================== */
+
+/* Hero glass container buttons */
+.hero-glass .btn,
+.hero-glass button.btn,
+.hero-glass .btn-primary,
+.hero-glass button.btn-primary,
+.hero-glass .btn-accent,
+.hero-glass button.btn-accent {
+  background: var(--color-white);
+  color: var(--color-dark-tertiary);
+  border: var(--border-base) solid var(--color-border-gray);
+  box-shadow: 0 var(--spacing-xs) var(--shadow-offset-lg) var(--color-black-alpha-08);
+}
+
+/* Modern center hero actions */
+.hero-grid.modern-center .actions .btn {
+  color: var(--color-dark-quaternary);
+  background: var(--color-white-short-7);
+  border-color: var(--color-dark-short-2);
+}
+
+.hero-grid.modern-center .btn-primary {
+  background: var(--acc2);
+  color: var(--color-dark-quaternary);
+}
+
+/* CTA form buttons */
+.cta-form .btn-accent {
+  box-shadow: 0 var(--spacing-base) var(--spacing-4xl) var(--acc3-alpha-35);
+  transition: transform var(--transition-slow) ease, box-shadow var(--transition-normal) ease;
+}
+
+.cta-form .btn-accent:hover {
+  transform: var(--transform-lift-md);
+  box-shadow: 0 var(--shadow-offset-lg) var(--shadow-offset-3xl) var(--acc3-alpha-40);
+}
+
+/* ========================================
+   BUTTONS - Theme Styles
+   ======================================== */
+
+/* Light theme overrides for hero-glass buttons */
+.theme-light .hero-glass .btn,
+.theme-light .hero-glass .btn-primary,
+.theme-light .hero-glass .btn-accent {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  border: 1.5px solid #bdd !important;
+}
+

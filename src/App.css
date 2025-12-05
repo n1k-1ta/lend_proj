@@ -1,4 +1,11 @@
 /* ========================================
+   IMPORTS
+   ======================================== */
+
+@import './components/buttons/buttons.css';
+@import './components/buttons/buttons.contexts.css';
+
+/* ========================================
    CONTAINER & LAYOUT
    ======================================== */
 
@@ -108,87 +115,6 @@
 }
 
 /* ========================================
-   BUTTONS
-   ======================================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  height: var(--size-button-height);
-  padding: 0 var(--spacing-base);
-  border: var(--border-thin) solid var(--color-white-alpha-14);
-  background: var(--color-bg-glass-light);
-  color: var(--text);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition-button);
-  position: relative;
-  z-index: var(--z-base);
-  isolation: isolate;
-}
-
-.btn:hover {
-  transform: var(--transform-lift-xs);
-  border-color: var(--color-white-alpha-24);
-  background: var(--color-white-alpha-10);
-  backdrop-filter: blur(var(--blur-xs)) saturate(var(--saturate-md));
-}
-
-/* Button glow effect */
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: var(--inset-offset);
-  border-radius: var(--radius-full);
-  filter: blur(var(--blur-3xl));
-  opacity: var(--opacity-0);
-  transition: opacity var(--transition-base) ease;
-  background: var(--color-white-alpha-20);
-  z-index: var(--z-negative);
-  pointer-events: none;
-}
-
-.btn:hover::after {
-  opacity: var(--opacity-base);
-}
-
-/* Button variants */
-.btn-primary {
-  background: var(--acc2);
-  border: var(--border-thin) solid var(--color-black-alpha-06);
-  color: var(--color-dark-alt);
-}
-
-.btn-primary::after {
-  background: var(--acc2-alpha-65);
-}
-
-.btn-accent {
-  background: var(--acc3);
-  border: var(--border-thin) solid var(--color-black-alpha-06);
-  color: var(--color-dark-alt);
-}
-
-.btn-accent::after {
-  background: var(--acc3-alpha-60);
-}
-
-.btn-primary:hover {
-  background: var(--acc2-hover);
-}
-
-.btn-accent:hover {
-  background: var(--acc3-hover);
-}
-
-.btn:focus-visible {
-  outline: var(--border-thick) solid var(--color-white-alpha-50);
-  outline-offset: var(--spacing-xs);
-}
-
-/* ========================================
    HERO SECTION
    ======================================== */
 
@@ -295,18 +221,6 @@
   z-index: var(--z-sticky);
 }
 
-.hero-glass .btn,
-.hero-glass button.btn,
-.hero-glass .btn-primary,
-.hero-glass button.btn-primary,
-.hero-glass .btn-accent,
-.hero-glass button.btn-accent {
-  background: var(--color-white);
-  color: var(--color-dark-tertiary);
-  border: var(--border-base) solid var(--color-border-gray);
-  box-shadow: 0 var(--spacing-xs) var(--shadow-offset-lg) var(--color-black-alpha-08);
-}
-
 .hero-glass:hover {
   box-shadow: 0 var(--spacing-base) var(--spacing-9xl) var(--color-shadow-purple-19), 0 var(--shadow-offset-sm) var(--spacing-lg) var(--color-shadow-purple-14);
 }
@@ -315,17 +229,6 @@
 .hero-grid.modern-center .typewriter,
 .hero-grid.modern-center .title,
 .hero-grid.modern-center .subtitle {
-  color: var(--color-dark-quaternary);
-}
-
-.hero-grid.modern-center .actions .btn {
-  color: var(--color-dark-quaternary);
-  background: var(--color-white-short-7);
-  border-color: var(--color-dark-short-2);
-}
-
-.hero-grid.modern-center .btn-primary {
-  background: var(--acc2);
   color: var(--color-dark-quaternary);
 }
 
@@ -859,16 +762,6 @@
   background: var(--color-white-alpha-90);
   color: var(--color-dark-alt);
   width: 100%;
-}
-
-.cta-form .btn-accent {
-  box-shadow: 0 var(--spacing-base) var(--spacing-4xl) var(--acc3-alpha-35);
-  transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
-}
-
-.cta-form .btn-accent:hover {
-  transform: var(--transform-lift-sm);
-  box-shadow: 0 var(--shadow-offset-lg) var(--shadow-offset-3xl) var(--acc3-alpha-40);
 }
 
 /* ========================================
