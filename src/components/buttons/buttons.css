@@ -20,7 +20,7 @@
 
 .btn:hover {
   transform: var(--transform-lift-sm);
-  border-color: var(--color-white-alpha-24);
+  border-color: var(--color-white-short-7);
   backdrop-filter: blur(var(--blur-xs)) saturate(var(--saturate-md));
 }
 
@@ -89,6 +89,10 @@ button.btn-hero {
 .btn_header {
   transition: var(--transition-button);
   color: var(--text);
+}
+
+.btn_header:hover {
+  background: var(--color-white-alpha-10);
 }
 
 /* Light theme override for hero buttons */
