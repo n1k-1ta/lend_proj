@@ -5,21 +5,27 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root {
+  /* ========================================
+     ЦВЕТОВАЯ ПАЛИТРА
+     ======================================== */
+  
+  /* Базовые цвета */
   --bg: #171717;
+  --text: #F5F5F5;
+  --text-dim: #CFCFCF;
   --muted: #818181;
+  
+  /* Акцентные цвета */
   --acc1: #DDC1FE;
   --acc2: #F4F17B;
   --acc3: #EB6F49;
   --acc4: #7DD3FC;
   --acc5: #86EFAC;
   --acc6: #F9A8D4;
-  --text: #F5F5F5;
-  --text-dim: #CFCFCF;
-  --header-h: 72px;
-  --font-heading: 'ClearSansInfanity', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
-  /* Базовые цвета темного текста */
+  /* Цвета для текста и фонов */
   --color-dark: #181818;
   --color-dark-alt: #1a1a1a;
   --color-dark-tertiary: #212121;
@@ -27,46 +33,82 @@
   --color-gray: #333;
   --color-text-light: #f5f5f5;
   --color-white: #fff;
+  --color-bg-light: #FFFBF7;
+  
+  /* Прозрачность - белые */
+  --white-alpha-02: rgba(255, 255, 255, 0.02);
+  --white-alpha-06: rgba(255, 255, 255, 0.06);
+  --white-alpha-08: rgba(255, 255, 255, 0.08);
+  --white-alpha-10: rgba(255, 255, 255, 0.10);
+  --white-alpha-12: rgba(255, 255, 255, 0.12);
+  --white-alpha-13: rgba(255, 255, 255, 0.13);
+  --white-alpha-14: rgba(255, 255, 255, 0.14);
+  --white-alpha-15: rgba(255, 255, 255, 0.15);
+  --white-alpha-16: rgba(255, 255, 255, 0.16);
+  --white-alpha-18: rgba(255, 255, 255, 0.18);
+  --white-alpha-20: rgba(255, 255, 255, 0.2);
+  --white-alpha-24: rgba(255, 255, 255, 0.24);
+  --white-alpha-50: rgba(255, 255, 255, 0.5);
+  --white-alpha-90: rgba(255, 255, 255, 0.9);
+  --white-short-2: #fff2;
+  --white-short-7: #fff7;
+  
+  /* Обратная совместимость для старых имен переменных */
+  --color-white-alpha-02: var(--white-alpha-02);
+  --color-white-alpha-06: var(--white-alpha-06);
+  --color-white-alpha-08: var(--white-alpha-08);
+  --color-white-alpha-10: var(--white-alpha-10);
+  --color-white-alpha-12: var(--white-alpha-12);
+  --color-white-alpha-13: var(--white-alpha-13);
+  --color-white-alpha-14: var(--white-alpha-14);
+  --color-white-alpha-15: var(--white-alpha-15);
+  --color-white-alpha-16: var(--white-alpha-16);
+  --color-white-alpha-18: var(--white-alpha-18);
+  --color-white-alpha-20: var(--white-alpha-20);
+  --color-white-alpha-24: var(--white-alpha-24);
+  --color-white-alpha-50: var(--white-alpha-50);
+  --color-white-alpha-90: var(--white-alpha-90);
+  --color-white-alpha-10-alt: var(--white-alpha-10);
+  --color-white-short-2: var(--white-short-2);
+  --color-white-short-7: var(--white-short-7);
+  
+  /* Прозрачность - черные */
+  --black-alpha-06: rgba(0, 0, 0, 0.06);
+  --black-alpha-08: rgba(0, 0, 0, 0.08);
+  --black-alpha-12: rgba(0, 0, 0, 0.12);
+  --black-alpha-14: rgba(0, 0, 0, 0.14);
+  --black-alpha-18: rgba(0, 0, 0, 0.18);
+  --black-alpha-28: rgba(0, 0, 0, 0.28);
+  --black-alpha-35: rgba(0, 0, 0, 0.35);
+  --black-alpha-38: rgba(0, 0, 0, 0.38);
+  
+  /* Обратная совместимость для старых имен переменных */
+  --color-black-alpha-06: var(--black-alpha-06);
+  --color-black-alpha-08: var(--black-alpha-08);
+  --color-black-alpha-12: var(--black-alpha-12);
+  --color-black-alpha-14: var(--black-alpha-14);
+  --color-black-alpha-18: var(--black-alpha-18);
+  --color-black-alpha-28: var(--black-alpha-28);
+  --color-black-alpha-35: var(--black-alpha-35);
+  --color-black-alpha-38: var(--black-alpha-38);
   
   /* Темные фоны с прозрачностью */
-  --color-bg-dark-30: rgba(30, 30, 30, 0.55);
-  --color-bg-dark-30-light: rgba(30, 30, 30, 0.53);
-  --color-bg-dark-23: rgba(23, 23, 23, 0.55);
-  --color-bg-dark-23-90: rgba(23, 23, 23, 0.9);
-  --color-bg-dark-23-20: rgba(23, 23, 23, 0.2);
-  --color-bg-dark-17: rgba(17, 17, 17, 0.82);
-  --color-bg-dark-17-83: rgba(17, 17, 17, 0.83);
+  --bg-dark-30: rgba(30, 30, 30, 0.55);
+  --bg-dark-30-light: rgba(30, 30, 30, 0.53);
+  --bg-dark-23: rgba(23, 23, 23, 0.55);
+  --bg-dark-23-90: rgba(23, 23, 23, 0.9);
+  --bg-dark-23-20: rgba(23, 23, 23, 0.2);
+  --bg-dark-17: rgba(17, 17, 17, 0.82);
+  --bg-dark-17-83: rgba(17, 17, 17, 0.83);
   
-  /* Белые с прозрачностью для границ и фонов */
-  --color-white-alpha-02: rgba(255, 255, 255, 0.02);
-  --color-white-alpha-06: rgba(255, 255, 255, 0.06);
-  --color-white-alpha-08: rgba(255, 255, 255, 0.08);
-  --color-white-alpha-10: rgba(255, 255, 255, 0.10);
-  --color-white-alpha-12: rgba(255, 255, 255, 0.12);
-  --color-white-alpha-13: rgba(255, 255, 255, 0.13);
-  --color-white-alpha-14: rgba(255, 255, 255, 0.14);
-  --color-white-alpha-15: rgba(255, 255, 255, 0.15);
-  --color-white-alpha-16: rgba(255, 255, 255, 0.16);
-  --color-white-alpha-18: rgba(255, 255, 255, 0.18);
-  --color-white-alpha-20: rgba(255, 255, 255, 0.2);
-  --color-white-alpha-24: rgba(255, 255, 255, 0.24);
-  --color-white-alpha-50: rgba(255, 255, 255, 0.5);
-  --color-white-alpha-90: rgba(255, 255, 255, 0.9);
-  --color-white-alpha-10-alt: rgba(255, 255, 255, 0.1);
-  --color-white-short-2: #fff2;
-  --color-white-short-7: #fff7;
-  --color-purple-alpha-06: rgba(230, 230, 255, 0.06);
-  --color-dark-short-2: #2222;
-  
-  /* Черные с прозрачностью для теней и границ */
-  --color-black-alpha-06: rgba(0, 0, 0, 0.06);
-  --color-black-alpha-08: rgba(0, 0, 0, 0.08);
-  --color-black-alpha-12: rgba(0, 0, 0, 0.12);
-  --color-black-alpha-14: rgba(0, 0, 0, 0.14);
-  --color-black-alpha-18: rgba(0, 0, 0, 0.18);
-  --color-black-alpha-28: rgba(0, 0, 0, 0.28);
-  --color-black-alpha-35: rgba(0, 0, 0, 0.35);
-  --color-black-alpha-38: rgba(0, 0, 0, 0.38);
+  /* Обратная совместимость для старых имен переменных */
+  --color-bg-dark-30: var(--bg-dark-30);
+  --color-bg-dark-30-light: var(--bg-dark-30-light);
+  --color-bg-dark-23: var(--bg-dark-23);
+  --color-bg-dark-23-90: var(--bg-dark-23-90);
+  --color-bg-dark-23-20: var(--bg-dark-23-20);
+  --color-bg-dark-17: var(--bg-dark-17);
+  --color-bg-dark-17-83: var(--bg-dark-17-83);
   
   /* Акцентные цвета с прозрачностью */
   --acc1-alpha-19: rgba(221, 193, 254, 0.19);
@@ -96,28 +138,65 @@
   --acc3-alpha-95: rgba(235, 111, 73, 0.95);
   --acc3-hover: #f28264;
   
-  /* Специальные цвета для теней и эффектов */
-  --color-shadow-slate: rgba(50, 56, 86, 0.15);
-  --color-shadow-purple-13: rgba(90, 82, 210, 0.13);
-  --color-shadow-purple-14: rgba(90, 82, 210, 0.14);
-  --color-shadow-purple-19: rgba(155, 130, 250, 0.19);
-  --color-shadow-purple-16: rgba(119, 106, 192, 0.16);
-  --color-border-gray: #ddd;
-  --color-border-gray-light: #ececec;
-  --color-border-teal: #bdd;
-  --color-bg-light: #FFFBF7;
+  /* Тени и эффекты */
+  --shadow-slate: rgba(50, 56, 86, 0.15);
+  --shadow-purple-13: rgba(90, 82, 210, 0.13);
+  --shadow-purple-14: rgba(90, 82, 210, 0.14);
+  --shadow-purple-16: rgba(119, 106, 192, 0.16);
+  --shadow-purple-19: rgba(155, 130, 250, 0.19);
+  --border-gray: #ddd;
+  --border-gray-light: #ececec;
+  --border-teal: #bdd;
+  --purple-alpha-06: rgba(230, 230, 255, 0.06);
+  --dark-short-2: #2222;
   
-  /* Цвета для стеклянных эффектов (обратная совместимость) */
-  --color-bg-glass: rgba(30, 30, 30, 0.55);
-  --color-bg-glass-light: rgba(255, 255, 255, 0.06);
-  --color-border-light: rgba(255, 255, 255, 0.08);
+  /* Обратная совместимость для старых имен переменных */
+  --color-shadow-slate: var(--shadow-slate);
+  --color-shadow-purple-13: var(--shadow-purple-13);
+  --color-shadow-purple-14: var(--shadow-purple-14);
+  --color-shadow-purple-16: var(--shadow-purple-16);
+  --color-shadow-purple-19: var(--shadow-purple-19);
+  --color-border-gray: var(--border-gray);
+  --color-border-gray-light: var(--border-gray-light);
+  --color-border-teal: var(--border-teal);
+  --color-purple-alpha-06: var(--purple-alpha-06);
+  --color-dark-short-2: var(--dark-short-2);
   
-  /* Breakpoints */
-  --bp-mobile: 600px;
-  --bp-tablet: 700px;
-  --bp-desktop: 900px;
+  /* Glass эффекты */
+  --bg-glass: rgba(30, 30, 30, 0.55);
+  --bg-glass-light: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.08);
   
-  /* Spacing System */
+  /* Обратная совместимость для старых имен переменных */
+  --color-bg-glass: var(--bg-glass);
+  --color-bg-glass-light: var(--bg-glass-light);
+  --color-border-light: var(--border-light);
+  
+  /* ========================================
+     ТИПОГРАФИКА
+     ======================================== */
+  --font-heading: 'ClearSansInfanity', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 36px;
+  --text-5xl: 38px;
+  --text-6xl: 56px;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.15;
+  --letter-tight: 0.01em;
+  --letter-normal: 0.02em;
+  --letter-wide: 0.08em;
+  
+  /* ========================================
+     SPACING SYSTEM
+     ======================================== */
   --spacing-0: 0;
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -135,166 +214,15 @@
   --spacing-9xl: 56px;
   --spacing-10xl: 68px;
   --spacing-11xl: 72px;
-  
-  /* Border Radius */
-  --radius-xs: 8px;
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-base: 16px;
-  --radius-lg: 20px;
-  --radius-xl: 22px;
-  --radius-2xl: 24px;
-  --radius-full: 50%;
-  --radius-pill: 999px;
-  
-  /* Blur Effects */
-  --blur-none: 0;
-  --blur-xs: 8px;
-  --blur-sm: 10px;
-  --blur-md: 14px;
-  --blur-base: 16px;
-  --blur-lg: 17px;
-  --blur-xl: 18px;
-  --blur-2xl: 32px;
-  --blur-3xl: 34px;
-  --blur-4xl: 50px;
-  --blur-5xl: 54px;
-  --blur-6xl: 65px;
-  --blur-7xl: 74px;
-  
-  /* Z-index Scale */
-  --z-base: 0;
-  --z-dropdown: 1;
-  --z-sticky: 2;
-  --z-overlay: 3;
-  --z-modal: 100;
-  --z-negative: -1;
-  
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.3s ease;
-  --transition-normal: 0.35s ease;
-  --transition-slow: 0.42s ease;
-  --transition-slower: 0.6s ease;
-  --transition-slowest: 0.7s ease;
-  --transition-button: transform var(--transition-normal), background var(--transition-normal), border-color var(--transition-normal);
-  --transition-custom-25: 0.25s;
-  --transition-custom-33: 0.33s;
-  --transition-custom-50: 0.5s;
-  
-  /* Theme transition - плавное переключение тем */
-  --transition-theme: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-                      color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-                      border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-                      box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
-                      backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1),
-                      outline-color 400ms cubic-bezier(1, 0.0, 0.4, 1);
-  
-  /* Animation Durations */
-  --animation-fast: 1s;
-  --animation-base: 4s;
-  --animation-normal: 5s;
-  --animation-slow: 6s;
-  --animation-slower: 7s;
-  --animation-slowest: 11s;
-  --animation-very-slow: 12s;
-  --animation-extreme: 18s;
-  
-  /* Animation Delays */
-  --animation-delay-21: 0.21s;
-  --animation-delay-39: 0.39s;
-  --animation-delay-57: 0.57s;
-  --animation-delay-120: 1.2s;
-  --animation-delay-240: 2.4s;
-  --animation-delay-250: 2.5s;
-  
-  /* Box Shadow Specific Values */
-  --shadow-offset-xs: 3px;
-  --shadow-offset-sm: 5px;
-  --shadow-offset-md: 6px;
-  --shadow-offset-lg: 22px;
-  --shadow-offset-xl: 26px;
-  --shadow-offset-2xl: 30px;
-  --shadow-offset-3xl: 46px;
-  --shadow-offset-4xl: 64px;
-  --shadow-blur-xs: 1.5px;
-  
-  /* Specific Sizes */
-  --size-media-min-height: 120px;
   --gap-small: 6px;
   
-  /* Font Sizes */
-  --text-xs: 12px;
-  --text-sm: 13px;
-  --text-base: 14px;
-  --text-md: 15px;
-  --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 28px;
-  --text-4xl: 36px;
-  --text-5xl: 38px;
-  --text-6xl: 56px;
-  
-  /* Letter Spacing */
-  --letter-tight: 0.01em;
-  --letter-normal: 0.02em;
-  --letter-wide: 0.08em;
-  
-  /* Opacity Values */
-  --opacity-0: 0;
-  --opacity-disabled: 0.2;
-  --opacity-medium: 0.55;
-  --opacity-base: 0.6;
-  --opacity-high: 0.7;
-  --opacity-higher: 0.75;
-  --opacity-subdued: 0.85;
-  --opacity-strong: 0.88;
-  --opacity-stronger: 0.9;
-  --opacity-strongest: 0.92;
-  --opacity-full: 1;
-  
-  /* Transform Values */
-  --transform-lift-xs: translateY(-1px);
-  --transform-lift-sm: translateY(-2px);
-  --transform-lift-md: translateY(-4px);
-  --transform-lift-lg: translateY(-10px);
-  --transform-lift-xl: translateY(-32px);
-  --transform-drop: translateY(32px);
-  --transform-drop-sm: translateY(36px);
-  --transform-none: translateY(0);
-  --transform-scale-sm: scale(0.85);
-  --transform-scale-md: scale(0.95);
-  --transform-scale-base: scale(1);
-  --transform-scale-lg: scale(1.02);
-  --transform-scale-xl: scale(1.05);
-  --transform-scale-x-md: scaleX(0.95);
-  --transform-scale-x-xl: scaleX(1.05);
-  
-  /* Sizes */
-  --size-icon-xs: 8px;
-  --size-icon-sm: 28px;
-  --size-icon-base: 32px;
-  --size-icon-lg: 36px;
-  --size-button-height: 44px;
-  --size-media-sm: 48px;
-  --size-media-base: 70px;
-  --size-media-md: 90px;
-  --size-media-lg: 120px;
-  --size-media-xl: 130px;
-  --size-logo-max: 120px;
-  --size-divider-width: 80px;
-  --size-divider-height: 2px;
-  --size-hero-min-height: 340px;
-  --size-hero-glow-height: 430px;
-  --size-media-animated-min: 210px;
-  
-  /* Container Widths */
+  /* ========================================
+     РАЗМЕРЫ И КОНТЕЙНЕРЫ
+     ======================================== */
+  --header-h: 72px;
   --container-max: 1200px;
   --container-hero-max: 900px;
   --container-glass-max: 1060px;
-  
-  /* Specific Spacing Values */
   --container-padding-sm: 28px;
   --container-padding-lg: 40px;
   --header-padding-y: 12px;
@@ -312,25 +240,143 @@
   --footer-padding-bottom: 40px;
   --main-padding-top: calc(var(--header-h) + var(--spacing-4xl));
   
-  /* Border Widths */
+  /* ========================================
+     BORDER & RADIUS
+     ======================================== */
   --border-thin: 1px;
   --border-base: 1.5px;
   --border-thick: 3px;
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-base: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 22px;
+  --radius-2xl: 24px;
+  --radius-full: 50%;
+  --radius-pill: 999px;
   
-  /* Line Heights */
-  --line-height-tight: 1.15;
-  
-  /* Font Weights */
-  --font-weight-normal: 500;
-  --font-weight-bold: 700;
-  
-  /* Saturate Values */
+  /* ========================================
+     EFFECTS
+     ======================================== */
+  --blur-none: 0;
+  --blur-xs: 8px;
+  --blur-sm: 10px;
+  --blur-md: 14px;
+  --blur-base: 16px;
+  --blur-lg: 17px;
+  --blur-xl: 18px;
+  --blur-2xl: 32px;
+  --blur-3xl: 34px;
+  --blur-4xl: 50px;
+  --blur-5xl: 54px;
+  --blur-6xl: 65px;
+  --blur-7xl: 74px;
   --saturate-base: 116%;
   --saturate-md: 120%;
   --saturate-lg: 125%;
   --saturate-xl: 140%;
   
-  /* Specific Values */
+  /* ========================================
+     Z-INDEX
+     ======================================== */
+  --z-base: 0;
+  --z-dropdown: 1;
+  --z-sticky: 2;
+  --z-overlay: 3;
+  --z-modal: 100;
+  --z-negative: -1;
+  
+  /* ========================================
+     TRANSITIONS & ANIMATIONS
+     ======================================== */
+  /* Единый transition для синхронной смены тем - применяется глобально */
+  --transition-theme-duration: 600ms;
+  --transition-theme-timing: cubic-bezier(1, 0.0, 0.4, 1);
+  --transition-theme: background-color var(--transition-theme-duration) var(--transition-theme-timing),
+                      color 400ms var(--transition-theme-timing),
+                      border-color var(--transition-theme-duration) var(--transition-theme-timing),
+                      box-shadow var(--transition-theme-duration) var(--transition-theme-timing),
+                      backdrop-filter 400ms var(--transition-theme-timing),
+                      outline-color 400ms var(--transition-theme-timing);
+  
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.42s ease;
+  --transition-slower: 0.6s ease;
+  --transition-slowest: 0.7s ease;
+  --transition-button: transform var(--transition-normal), background var(--transition-normal), border-color var(--transition-normal);
+  --transition-custom-25: 0.25s;
+  --transition-custom-33: 0.33s;
+  --transition-custom-50: 0.5s;
+  
+  --animation-fast: 1s;
+  --animation-base: 4s;
+  --animation-normal: 5s;
+  --animation-slow: 6s;
+  --animation-slower: 7s;
+  --animation-slowest: 11s;
+  --animation-very-slow: 12s;
+  --animation-extreme: 18s;
+  --animation-delay-21: 0.21s;
+  --animation-delay-39: 0.39s;
+  --animation-delay-57: 0.57s;
+  --animation-delay-120: 1.2s;
+  --animation-delay-240: 2.4s;
+  --animation-delay-250: 2.5s;
+  
+  /* ========================================
+     SHADOWS & TRANSFORMS
+     ======================================== */
+  --shadow-offset-xs: 3px;
+  --shadow-offset-sm: 5px;
+  --shadow-offset-md: 6px;
+  --shadow-offset-lg: 22px;
+  --shadow-offset-xl: 26px;
+  --shadow-offset-2xl: 30px;
+  --shadow-offset-3xl: 46px;
+  --shadow-offset-4xl: 64px;
+  --shadow-blur-xs: 1.5px;
+  --transform-lift-xs: translateY(-1px);
+  --transform-lift-sm: translateY(-2px);
+  --transform-lift-md: translateY(-4px);
+  --transform-lift-lg: translateY(-10px);
+  --transform-lift-xl: translateY(-32px);
+  --transform-drop: translateY(32px);
+  --transform-drop-sm: translateY(36px);
+  --transform-none: translateY(0);
+  --transform-scale-sm: scale(0.85);
+  --transform-scale-md: scale(0.95);
+  --transform-scale-base: scale(1);
+  --transform-scale-lg: scale(1.02);
+  --transform-scale-xl: scale(1.05);
+  --transform-scale-x-md: scaleX(0.95);
+  --transform-scale-x-xl: scaleX(1.05);
+  
+  /* ========================================
+     SIZES
+     ======================================== */
+  --size-icon-xs: 8px;
+  --size-icon-sm: 28px;
+  --size-icon-base: 32px;
+  --size-icon-lg: 36px;
+  --size-button-height: 44px;
+  --size-media-sm: 48px;
+  --size-media-base: 70px;
+  --size-media-md: 90px;
+  --size-media-lg: 120px;
+  --size-media-xl: 130px;
+  --size-logo-max: 120px;
+  --size-divider-width: 80px;
+  --size-divider-height: 2px;
+  --size-hero-min-height: 340px;
+  --size-hero-glow-height: 430px;
+  --size-media-animated-min: 210px;
+  
+  /* ========================================
+     SPECIFIC VALUES
+     ======================================== */
   --inset-offset: -45%;
   --inset-offset-lg: -42%;
   --inset-offset-xl: -60%;
@@ -343,6 +389,31 @@
   --hero-glow-position-top: 50% 20%;
   --hero-glow-position-bottom: 60% 46%;
   
+  /* ========================================
+     OPACITY
+     ======================================== */
+  --opacity-0: 0;
+  --opacity-disabled: 0.2;
+  --opacity-medium: 0.55;
+  --opacity-base: 0.6;
+  --opacity-high: 0.7;
+  --opacity-higher: 0.75;
+  --opacity-subdued: 0.85;
+  --opacity-strong: 0.88;
+  --opacity-stronger: 0.9;
+  --opacity-strongest: 0.92;
+  --opacity-full: 1;
+  
+  /* ========================================
+     BREAKPOINTS
+     ======================================== */
+  --bp-mobile: 600px;
+  --bp-tablet: 700px;
+  --bp-desktop: 900px;
+  
+  /* ========================================
+     БАЗОВЫЕ СТИЛИ
+     ======================================== */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -352,18 +423,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ
+   ======================================== */
 * {
   box-sizing: border-box;
 }
 
-/* Глобальное применение плавного перехода для всех элементов при переключении тем */
+/* ========================================
+   СИНХРОННАЯ СМЕНА ТЕМ
+   ======================================== */
+/* 
+ * Для синхронной смены тем: убираем глобальные переходы цветов/фонов,
+ * чтобы не было задержек и разрывов при переключении темы.
+ */
 *,
 *::before,
 *::after {
-  transition: var(--transition-theme);
+  transition: none !important;
 }
 
-/* Исключения: медиа-элементы и SVG не нуждаются в transition для цветов */
+/* Для основных фонов убираем transition, чтобы смена темы была мгновенной и без разрыва */
+body,
+.main,
+.hero,
+.section,
+.section-top-indent {
+  transition: none !important;
+}
+
+/* Исключения: медиа-элементы не нуждаются в transition */
 svg,
 svg *,
 canvas,
@@ -373,49 +463,88 @@ video,
 iframe {
   transition: none;
 }
-html, body, #root {
+
+/* ========================================
+   HTML & BODY
+   ======================================== */
+html,
+body,
+#root {
   height: 100%;
 }
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  transition: var(--transition-theme);
 }
+
+/* ========================================
+   ТЕМЫ
+   ======================================== */
 body.theme-light {
-  background: #FFFBF7 !important;
+  background: #FAF8F3 !important;
   color: #181818 !important;
 }
+
 body.theme-dark {
   background: var(--bg) !important;
   color: var(--text) !important;
 }
+
+body.theme-light .main,
+body.theme-light .section {
+  background: #FFFBF7 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.theme-light) {
+    background: var(--bg);
+    color: var(--text);
+  }
+}
+
+/* ========================================
+   БАЗОВЫЕ ЭЛЕМЕНТЫ
+   ======================================== */
 a {
   color: var(--text);
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
+
 button {
   font-family: inherit;
 }
+
+/* ========================================
+   ТЕМНЫЕ СТИЛИ ДЛЯ СВЕТЛОЙ ТЕМЫ
+   ======================================== */
 .theme-light .hero-glass {
-  background: rgba(30,30,30,0.53);
+  background: rgba(30, 30, 30, 0.53);
   color: #fff !important;
   text-shadow: 0 1px 8px #fff2;
   backdrop-filter: blur(14px) saturate(116%);
-  box-shadow: 0 12px 48px rgba(0,0,0,0.18), 0 2px 10px rgba(90,82,210,0.13);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18), 0 2px 10px rgba(90, 82, 210, 0.13);
 }
-.theme-light .hero-glass * {color: #fff !important;text-shadow: 0 1px 8px #fff2;}
+
+.theme-light .hero-glass * {
+  color: #fff !important;
+  text-shadow: 0 1px 8px #fff2;
+}
+
 .theme-light .grid-3 .card {
-  background: rgba(30,30,30,0.53);
+  background: rgba(30, 30, 30, 0.53);
   color: #fff !important;
   text-shadow: 0 1px 8px #fff2;
   backdrop-filter: blur(10px) saturate(120%);
   border: 1.5px solid #ececec;
 }
+
 .theme-light .grid-3 .card:hover {
   color: #fff !important;
   backdrop-filter: none;
@@ -423,16 +552,16 @@ button {
   border: 1.5px solid transparent;
   text-shadow: none;
 }
-.theme-dark .grid-3 .card, .theme-dark .hero-glass {
+
+.theme-dark .grid-3 .card,
+.theme-dark .hero-glass {
   color: #fff !important;
 }
-@media (prefers-color-scheme: dark) {
-  body:not(.theme-light) {
-    background: var(--bg);
-    color: var(--text);
-  }
-}
-body.theme-light .main,
-body.theme-light .section {
-  background: #FFFBF7 !important;
+
+/* ========================================
+   ВЫДЕЛЕНИЕ ТЕКСТА
+   ======================================== */
+::selection {
+  background: #EB6F49;
+  color: #202022;
 }

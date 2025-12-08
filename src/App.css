@@ -13,7 +13,6 @@
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-padding-sm);
-  transition: var(--transition-theme);
 }
 
 /* ========================================
@@ -31,7 +30,6 @@
   backdrop-filter: blur(var(--blur-base)) saturate(var(--saturate-xl));
   box-shadow: 0 var(--spacing-sm) var(--spacing-4xl) var(--color-black-alpha-35);
   padding: var(--spacing-0);
-  transition: var(--transition-theme);
 }
 
 .header-inner {
@@ -47,8 +45,7 @@
   opacity: var(--opacity-0);
   transform: var(--transform-lift-xl);
   transition: transform var(--transition-slower) ease, 
-              opacity var(--transition-slower) ease,
-              var(--transition-theme);
+              opacity var(--transition-slower) ease;
   transition-delay: var(--delay, 0s);
 }
 
@@ -61,10 +58,13 @@
 [data-animate]:not(.header) {
   opacity: var(--opacity-0);
   transform: var(--transform-drop);
-  transition: transform var(--transition-slowest) ease, 
-              opacity var(--transition-slowest) ease,
-              var(--transition-theme);
-  transition-delay: var(--delay, 0s);
+  transition: transform var(--transition-slowest) ease var(--delay, 0s), 
+              opacity var(--transition-slowest) ease var(--delay, 0s),
+              background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
   will-change: transform, opacity;
 }
 
@@ -100,7 +100,7 @@
   max-width: var(--size-logo-max);
   object-fit: contain;
   display: block;
-  margin: 0 var(--spacing-sm) 0 var(--spacing-0);
+  margin: 6px var(--spacing-sm) 0 var(--spacing-0);
 }
 
 /* Navigation */
@@ -125,10 +125,13 @@
    ======================================== */
 
 .hero {
-  padding: calc(var(--header-h) + var(--hero-padding-y)) 0 var(--hero-padding-y);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
   position: relative;
-  overflow: visible;
-  transition: var(--transition-theme);
+  overflow: hidden;
 }
 
 .hero-grid {
@@ -172,7 +175,7 @@
   content: '';
   position: absolute;
   left: 50%;
-  top: 0%;
+  top: 25%;
   transform: translateX(-50%);
   width: var(--hero-glow-width);
   max-width: var(--container-hero-max);
@@ -196,8 +199,13 @@
   max-width: var(--container-glass-max);
   min-width: var(--spacing-0);
   margin: var(--spacing-lg) auto var(--spacing-0) auto;
-  transition: var(--transition-theme), box-shadow var(--transition-custom-25);
+  transition: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
   overflow: hidden;
+  margin-top: 4vh;
 }
 
 .hero-glass::after {
@@ -499,17 +507,19 @@
 .section {
   padding: var(--section-padding-y) var(--spacing-0);
   border-top: var(--border-thin) solid var(--color-white-alpha-06);
-  transition: var(--transition-theme);
 }
 
 /* Smooth slide-up animation for sections */
 .section[data-animate] {
   opacity: var(--opacity-0);
   transform: translateY(80px);
-  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 2s cubic-bezier(0.16, 1, 0.3, 1),
-              var(--transition-theme);
-  transition-delay: var(--delay, 0s);
+  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s), 
+              opacity 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+              background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
+              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
+              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
   will-change: transform, opacity;  
 }
 
@@ -530,7 +540,6 @@
 
 .main {
   padding-top: var(--main-padding-top);
-  transition: var(--transition-theme);
 }
 
 /* ========================================
@@ -551,7 +560,6 @@
   padding: var(--card-padding);
   color: var(--color-dark-alt);
   box-shadow: 0 var(--spacing-md) var(--spacing-2xl) var(--color-black-alpha-18);
-  transition: var(--transition-theme);
 }
 
 .card h3 {
@@ -677,9 +685,9 @@
 }
 
 /* Tech list card colors */
-.tech-list .card:nth-child(1) { background: var(--acc4); }
-.tech-list .card:nth-child(2) { background: var(--acc5); }
-.tech-list .card:nth-child(3) { background: var(--acc6); }
+.tech-list .card:nth-child(1) { background: #DDC1FE; }
+.tech-list .card:nth-child(2) { background: #EB6F49; }
+.tech-list .card:nth-child(3) { background: #F4F17B; }
 
 /* Анимация появления для tech-list карточек */
 .tech-list .card[data-animate] {
@@ -1103,6 +1111,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  .tech-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
 }
 
 /* ========================================
@@ -1119,4 +1131,8 @@
   .media {
     animation: none;
   }
+}
+
+.hero-glass, .hero-glass .title, .hero-glass .subtitle, .hero-glass p, .hero-glass span {
+  color: #fff !important;
 }
