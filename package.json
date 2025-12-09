@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://n1k-1ta.github.io/lend_proj/",
+  "homepage": "https://n1k-1ta.github.io/lend_proj",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "node deploy.js",
     "preview": "vite preview"
   },
   "dependencies": {

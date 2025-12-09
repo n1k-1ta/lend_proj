@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import ThemeSwitcher from './components/theme-switcher/ThemeSwitcher'
 import './App.css'
+import kodaLogo from './assets/koda.png';
 
 function App() {
   const [email, setEmail] = useState('')
@@ -101,7 +102,7 @@ function App() {
       <header className="header" data-animate>
         <div className="container header-inner">
           <div className="brand">
-            <img src="/src/assets/koda.png" className="brand-logo" alt="Логотип" />
+            <img src={kodaLogo}  className="brand-logo" alt="Лого" />
 
           </div>
           <nav className="nav">
