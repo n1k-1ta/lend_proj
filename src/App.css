@@ -1035,6 +1035,9 @@
     border-radius: var(--radius-md);
     margin-top: var(--spacing-md);
   }
+  .btn_header {
+    display: none;
+  }
 }
 
 /* Medium devices (min-width: 600px) */
