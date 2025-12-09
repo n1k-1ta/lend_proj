@@ -20,6 +20,7 @@
 
 .btn:hover {
   transform: var(--transform-lift-sm);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
   border-color: var(--color-white-short-7);
   backdrop-filter: blur(var(--blur-xs)) saturate(var(--saturate-md));
 }
