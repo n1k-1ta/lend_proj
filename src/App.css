@@ -659,9 +659,35 @@
   will-change: transform, opacity;
 }
 
-.audience .card[data-animate].is-visible {
+.audience .card[data-animate].is-visible:not(.card_audience) {
   opacity: 1;
   transform: translateY(0);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              var(--transition-theme);
+}
+
+.audience .card_audience[data-animate].is-visible,
+.audience .card_audience[data-animate].is-visible:hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* individual shade color with hover effect */
+.audience .card_audience[data-animate].is-visible:nth-child(1):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(221, 193, 254, 0.5);
+}
+
+.audience .card_audience[data-animate].is-visible:nth-child(2):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(244, 241, 123, 0.5);
+}
+
+.audience .card_audience[data-animate].is-visible:nth-child(3):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(235, 111, 73, 0.5);
 }
 
 /* Последовательная задержка для audience карточек */
@@ -716,6 +742,29 @@
 
 .tech-list .card[data-animate]:nth-child(3) {
   --delay: 0.3s;
+}
+
+.tech-list .card_tech[data-animate].is-visible,
+.tech-list .card_tech[data-animate].is-visible:hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* individual shade color with hover effect */
+.tech-list .card_tech[data-animate].is-visible:nth-child(1):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(221, 193, 254, 0.3);
+}
+
+.tech-list .card_tech[data-animate].is-visible:nth-child(2):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(235, 111, 73, 0.3);
+}
+
+.tech-list .card_tech[data-animate].is-visible:nth-child(3):hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(244, 241, 123, 0.3);
 }
 
 /* ========================================

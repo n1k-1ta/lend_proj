@@ -193,15 +193,15 @@ function App() {
           <div className="container">
             <h2>Для кого</h2>
             <div className="audience">
-              <div className="card" data-animate>
+              <div className="card card_audience" data-animate>
                 <h3>Школьники</h3>
                 <p>Самостоятельное обучение и практика</p>
               </div>
-              <div className="card" data-animate>
+              <div className="card card_audience" data-animate>
                 <h3>Учителя</h3>
                 <p>Инструмент для индивидуальной работы</p>
               </div>
-              <div className="card" data-animate>
+              <div className="card card_audience" data-animate>
                 <h3>Родители</h3>
                 <p>Контроль успеваемости ребёнка</p>
               </div>
@@ -213,15 +213,15 @@ function App() {
           <div className="container">
             <h2>Технологии</h2>
             <div className="tech-list">
-              <div className="card" data-animate>
+              <div className="card card_tech" data-animate>
                 <h3>Искусственный интеллект и компьютерное зрение</h3>
                 <p>Классификация ошибок и анализ рукописных решений</p>
               </div>
-              <div className="card" data-animate>
+              <div className="card card_tech" data-animate>
                 <h3>Адаптивный веб-интерфейс</h3>
                 <p>Удобно на десктопе, планшете и мобильном</p>
               </div>
-              <div className="card" data-animate>
+              <div className="card card_tech" data-animate>
                 <h3>Безопасное хранение данных</h3>
                 <p>Конфиденциальность и защита персональной информации</p>
               </div>
@@ -241,6 +241,8 @@ function App() {
                   <span>⚡ Мгновенный доступ к разбору</span>
                   <span>🧠 Персональная траектория</span>
                   <span>🗂️ История прогресса</span>
+                  <span>⏰ Доступ 24/7</span>
+                  <span>✨ Адаптация к ученику</span>
                 </div>
               </div>
 
