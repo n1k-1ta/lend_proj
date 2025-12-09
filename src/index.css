@@ -431,14 +431,19 @@
   box-sizing: border-box;
 }
 
-/* Для основных фонов убираем transition, чтобы смена темы была мгновенной и без разрыва */
-body,
+/* Убираем transition только для основных структурных элементов, 
+   но разрешаем transitions для дочерних элементов с темами */
+body {
+  transition: none !important;
+}
+
 .main,
-.hero,
 .section,
 .section-top-indent {
   transition: none !important;
 }
+
+/* Hero: transition убран на уровне body, дочерние элементы используют свои transitions */
 
 /* Исключения: медиа-элементы не нуждаются в transition */
 svg,

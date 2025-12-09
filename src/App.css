@@ -30,6 +30,7 @@
   backdrop-filter: blur(var(--blur-base)) saturate(var(--saturate-xl));
   box-shadow: 0 var(--spacing-sm) var(--spacing-4xl) var(--color-black-alpha-35);
   padding: var(--spacing-0);
+  transition: var(--transition-theme);
 }
 
 .header-inner {
@@ -60,11 +61,7 @@
   transform: var(--transform-drop);
   transition: transform var(--transition-slowest) ease var(--delay, 0s), 
               opacity var(--transition-slowest) ease var(--delay, 0s),
-              background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
+              var(--transition-theme);
   will-change: transform, opacity;
 }
 
@@ -199,11 +196,7 @@
   max-width: var(--container-glass-max);
   min-width: var(--spacing-0);
   margin: var(--spacing-lg) auto var(--spacing-0) auto;
-  transition: background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
+  transition: var(--transition-theme);
   overflow: hidden;
   margin-top: 4vh;
 }
@@ -241,10 +234,19 @@
 }
 
 /* Modern center variant */
+.hero-grid.modern-center {
+  transition: var(--transition-theme);
+}
+
 .hero-grid.modern-center .typewriter,
 .hero-grid.modern-center .title,
 .hero-grid.modern-center .subtitle {
   color: var(--color-dark-quaternary);
+  transition: var(--transition-theme);
+}
+
+.hero-grid.modern-center .hero-glass {
+  transition: var(--transition-theme);
 }
 
 /* ========================================
@@ -515,11 +517,7 @@
   transform: translateY(80px);
   transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s), 
               opacity 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
-              background-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              color 400ms cubic-bezier(1, 0.0, 0.4, 1),
-              border-color 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              box-shadow 600ms cubic-bezier(1, 0.0, 0.4, 1),
-              backdrop-filter 400ms cubic-bezier(1, 0.0, 0.4, 1) !important;
+              var(--transition-theme);
   will-change: transform, opacity;  
 }
 
@@ -560,6 +558,7 @@
   padding: var(--card-padding);
   color: var(--color-dark-alt);
   box-shadow: 0 var(--spacing-md) var(--spacing-2xl) var(--color-black-alpha-18);
+  transition: var(--transition-theme);
 }
 
 .card h3 {
@@ -671,7 +670,8 @@
 .audience .card_audience[data-animate].is-visible:hover {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              var(--transition-theme);
 }
 
 /* individual shade color with hover effect */
@@ -748,7 +748,8 @@
 .tech-list .card_tech[data-animate].is-visible:hover {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              var(--transition-theme);
 }
 
 /* individual shade color with hover effect */
@@ -780,6 +781,7 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: linear-gradient(120deg, var(--acc1-alpha-95), var(--acc2-alpha-95), var(--acc3-alpha-95));
+  transition: var(--transition-theme);
 }
 
 .steps::before {
@@ -803,6 +805,7 @@
   color: var(--text);
   box-shadow: 0 var(--spacing-md) var(--shadow-offset-2xl) var(--color-black-alpha-28);
   backdrop-filter: blur(var(--blur-base));
+  transition: var(--transition-theme);
 }
 
 /* Анимация появления для step элементов */
@@ -866,6 +869,7 @@
   color: var(--text);
   box-shadow: 0 var(--shadow-offset-xl) var(--spacing-9xl) var(--color-black-alpha-38);
   overflow: hidden;
+  transition: var(--transition-theme);
 }
 
 /* Анимация появления для CTA блока */

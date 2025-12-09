@@ -133,7 +133,7 @@ function App() {
           </div>
         </section>
 
-        <section id="features" className="section section-top-indent" data-animate>
+        <section id="features" className="section" data-animate>
           <div className="container">
             <h2>Преимущества</h2>
             <div className="grid-3">
