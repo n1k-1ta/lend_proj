@@ -136,7 +136,7 @@ function App() {
 
         <section id="features" className="section" data-animate>
           <div className="container">
-            <h2>Преимущества</h2>
+            <h2 data-animate style={{ '--delay': '0.05s' }}>Преимущества</h2>
             <div className="grid-3">
               <div className="card card-hover-violet" data-animate style={{ '--delay': '0.05s' }}>
                 <h3>Проверка решений по фотографии</h3>
@@ -168,7 +168,7 @@ function App() {
 
         <section id="how" className="section" data-animate>
           <div className="container">
-            <h2>Как это работает</h2>
+            <h2 data-animate style={{ '--delay': '0.05s' }}>Как это работает</h2>
             <div className="steps">
               <div className="step" data-animate>
                 <div className="step-num">1</div>
@@ -192,7 +192,7 @@ function App() {
 
         <section id="audience" className="section" data-animate>
           <div className="container">
-            <h2>Для кого</h2>
+            <h2 data-animate style={{ '--delay': '0.05s' }}>Для кого</h2>
             <div className="audience">
               <div className="card card_audience" data-animate>
                 <h3>Школьники</h3>
@@ -212,13 +212,13 @@ function App() {
 
         <section className="section" data-animate>
           <div className="container">
-            <h2>Технологии</h2>
+            <h2 data-animate style={{ '--delay': '0.05s' }}>Технологии</h2>
             <div className="tech-list">
-              <div className="card card_tech" data-animate>
+              <div className="card card_tech card-tech-ai" data-animate>
                 <h3>Искусственный интеллект и компьютерное зрение</h3>
                 <p>Классификация ошибок и анализ рукописных решений</p>
               </div>
-              <div className="card card_tech" data-animate>
+              <div className="card card_tech card-tech-ui" data-animate>
                 <h3>Адаптивный веб-интерфейс</h3>
                 <p>Удобно на десктопе, планшете и мобильном</p>
               </div>

@@ -57,17 +57,16 @@
 
 /* General animation states (excluding header) */
 [data-animate]:not(.header) {
-  opacity: var(--opacity-0);
-  transform: var(--transform-drop);
-  transition: transform var(--transition-slowest) ease var(--delay, 0s), 
-              opacity var(--transition-slowest) ease var(--delay, 0s),
-              var(--transition-theme);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+              opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s);
   will-change: transform, opacity;
 }
 
 [data-animate].is-visible:not(.header) {
-  opacity: var(--opacity-full);
-  transform: var(--transform-none);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ========================================
@@ -513,16 +512,15 @@
 
 /* Smooth slide-up animation for sections */
 .section[data-animate] {
-  opacity: var(--opacity-0);
-  transform: translateY(80px);
-  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s), 
-              opacity 2s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
-              var(--transition-theme);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s), 
+              opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s);
   will-change: transform, opacity;  
 }
 
 .section[data-animate].is-visible {
-  opacity: var(--opacity-full);
+  opacity: 1;
   transform: translateY(0);
 }
 
@@ -635,6 +633,18 @@
   box-shadow: none;
   border: var(--border-base) solid transparent;
 }
+.grid-3 .card[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+              opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+              background var(--transition-custom-33) cubic-bezier(.3,2.2,.5,1);
+  will-change: transform, opacity;
+}
+.grid-3 .card[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Audience cards with accent colors */
 .audience {
@@ -710,6 +720,11 @@
   gap: var(--spacing-md);
 }
 
+/* Tech list colors: swap first two */
+.tech-list .card:nth-child(1) { background: var(--acc3); color: #181818; }
+.tech-list .card:nth-child(2) { background: var(--acc1); color: #181818; }
+.tech-list .card:nth-child(3) { background: var(--acc2); color: #181818; }
+
 /* Tech list card colors */
 .tech-list .card:nth-child(1) { background: #DDC1FE; }
 .tech-list .card:nth-child(2) { background: #EB6F49; }
@@ -742,6 +757,14 @@
 
 .tech-list .card[data-animate]:nth-child(3) {
   --delay: 0.3s;
+}
+.tech-list .card-tech-ai {
+  background: var(--acc3) !important;
+  color: #181818 !important;
+}
+.tech-list .card-tech-ui {
+  background: var(--acc1) !important;
+  color: #181818 !important;
 }
 
 .tech-list .card_tech[data-animate].is-visible,
@@ -824,7 +847,7 @@
   transform: translateY(0);
 }
 
-/* Последовательная задержка для каждого step */
+/* Последовательная задержка для появления каждого step */
 .steps .step[data-animate]:nth-child(1) {
   --delay: 0.1s;
 }
@@ -840,6 +863,9 @@
 .steps .step[data-animate]:nth-child(4) {
   --delay: 0.4s;
 }
+
+/* Цикличная анимация шагов отключена по запросу —
+   оставляем только плавное появление при скролле */
 
 .step-num {
   width: var(--size-icon-base);
@@ -981,6 +1007,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  align-items: center;
+  text-align: center;
 }
 
 /* ========================================
@@ -1015,6 +1043,8 @@
     transform: var(--transform-lift-lg) var(--transform-scale-lg);
   }
 }
+
+/* step-focus animation удалена — шаги статичны после появления */
 
 @keyframes media-sweep {
   0% {
@@ -1082,11 +1112,28 @@
   .media-logo {
     max-width: var(--size-media-sm);
   }
+  .hero {
+    align-items: center;
+  }
   .hero-glass {
     padding: var(--cta-padding-mobile-y) var(--cta-padding-mobile-x) var(--spacing-xl) var(--cta-padding-mobile-x);
     max-width: 99vw;
     border-radius: var(--radius-md);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-0);
+  }
+  /* Убираем анимированный текст на мобильных в hero */
+  .hero-glass .typewriter {
+    display: none;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+  /* Центруем контент CTA на мобильных */
+  .cta-content {
+    text-align: center;
+    align-items: center;
+  }
+  .cta-highlights {
+    justify-content: center;
   }
   .btn_header {
     display: none;
